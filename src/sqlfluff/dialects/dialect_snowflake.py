@@ -2820,6 +2820,7 @@ class AccessStatementSegment(BaseSegment):
                 "DATABASE",
                 "INTEGRATION",
                 "SHARE",
+                "TAG",
                 Sequence("DATA", "EXCHANGE", "LISTING"),
                 Sequence("NETWORK", "POLICY"),
             ),
@@ -2978,7 +2979,6 @@ class AccessStatementSegment(BaseSegment):
                         terminators=["ON"],
                     ),
                     "ON",
-                    # <--- Fix goes here
                     _objects,
                 ),
                 Sequence("ROLE", Ref("ObjectReferenceSegment")),
